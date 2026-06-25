@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    double x,y;
+
+    cout<<"Введите координату x: ";
+    cin>>x;
+    cout<<"Введите координату y: ";
+    cin>>y;
+
+    bool granica =
+    (x*x+y*y==100) ||
+    (y==x && x>=0 && x<=sqrt(50)) ||
+    (y==-x && x<=0 && x>=-sqrt(50));
+
+    if (granica)
+    {
+        cout<<"На границе";
+    }
+    else if ((x*x+y*y<100) && (y>=abs(x)))
+    {
+        cout<<"Да";
+    }
+    else
+    {
+        cout<<"Нет";
+    }
+
+    return 0;
+}
